@@ -8,7 +8,6 @@ import fade
 from colorama import Fore, Style
 from urllib.request import Request, urlopen
 
-
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -28,7 +27,7 @@ def save_error_log(error):
 
 def handle_error():
     error = traceback.format_exc()
-    print(Style.RESET_ALL + "Une erreur s'est produite. Veuillez consulter les logs pour plus de détails.")
+    print(Style.RESET_ALL + "An error occurred. Please check the logs for more details.")
     save_error_log(error)
 
 snusbase_auth = 'sbuncd7b2bfcflweh3dkbeqsuzlzqk'
@@ -57,11 +56,11 @@ def api_combo():
                 print("")
                 print(formatted_results)
             else:
-                print("La requête a échoué.")
+                print("The request failed.")
     
     if __name__ == '__main__':
 
-        term = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrez n'importe quelle valeur : ")
+        term = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Enter any value: ")
 
         if term == "exit":
             exit()
@@ -72,7 +71,7 @@ def api_combo():
         else:
             search = network_discord()
             search.search(term)
-            input("\nAppuyez sur Entrée pour continuer...")
+            input("\nPress Enter to continue...")
             default_menu()
 
 #-----------------------------------------------------------------
@@ -97,14 +96,14 @@ def api_ip_whois():
             for key, value in result.items():
                 print(f"{key}: {value}")
         else:
-            print("La requête a échoué.")
+            print("The request failed.")
 
     if __name__ == "__main__":
         auth_token = "sb0sl0hf866dmrtc4fkeatw7h8wlfo"
-        ip = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrez l'adresse IP : ")
+        ip = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Enter the IP address: ")
 
         api_whois(auth_token, ip)
-        input("\nAppuyez sur Entrée pour continuer...")
+        input("\nPress Enter to continue...")
         default_menu()
 
 #-----------------------------------------------------------------
@@ -128,7 +127,7 @@ def api_email():
 
     if __name__ == "__main__":
         
-        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrer un adresse Email : ")
+        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Enter an Email address: ")
 
         if termz == "exit":
             exit()
@@ -144,7 +143,7 @@ def api_email():
             formatted_response = json.dumps(search_response, indent=2)
             print(formatted_response)
 
-            input("\nAppuyez sur Entrée pour continuer...")
+            input("\nPress Enter to continue...")
             default_menu()
 
 #-----------------------------------------------------------------
@@ -168,7 +167,7 @@ def api_username():
 
     if __name__ == "__main__":
         
-        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrer un Username : ")
+        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Enter a Username: ")
 
         if termz == "exit":
             exit()
@@ -184,7 +183,7 @@ def api_username():
             formatted_response = json.dumps(search_response, indent=2)
             print(formatted_response)
 
-            input("\nAppuyez sur Entrée pour continuer...")
+            input("\nPress Enter to continue...")
             default_menu()
 
 #-----------------------------------------------------------------
@@ -208,7 +207,7 @@ def api_ip():
 
     if __name__ == "__main__":
         
-        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrer un adresse Ip : ")
+        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Enter an IP address: ")
 
         if termz == "exit":
             exit()
@@ -224,7 +223,7 @@ def api_ip():
             formatted_response = json.dumps(search_response, indent=2)
             print(formatted_response)
             
-            input("\nAppuyez sur Entrée pour continuer...")
+            input("\nPress Enter to continue...")
             default_menu()
 
 #-----------------------------------------------------------------
@@ -248,7 +247,7 @@ def api_hash():
 
     if __name__ == "__main__":
         
-        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrer un mot de passe Hash : ")
+        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Enter a Hashed Password: ")
 
         if termz == "exit":
             exit()
@@ -264,7 +263,7 @@ def api_hash():
             formatted_response = json.dumps(search_response, indent=2)
             print(formatted_response)
             
-            input("\nAppuyez sur Entrée pour continuer...")
+            input("\nPress Enter to continue...")
             default_menu()
 
 #-----------------------------------------------------------------
@@ -288,7 +287,7 @@ def api_password():
 
     if __name__ == "__main__":
         
-        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrer un mot de passe : ")
+        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Enter a Password: ")
 
         if termz == "exit":
             exit()
@@ -304,7 +303,7 @@ def api_password():
             formatted_response = json.dumps(search_response, indent=2)
             print(formatted_response)
             
-            input("\nAppuyez sur Entrée pour continuer...")
+            input("\nPress Enter to continue...")
             default_menu()
 
 #-----------------------------------------------------------------
@@ -328,7 +327,7 @@ def api_name():
 
     if __name__ == "__main__":
         
-        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrer un Prenom & Nom avec un espace : ")
+        termz = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Enter a First & Last Name separated by space: ")
 
         if termz == "exit":
             exit()
@@ -344,7 +343,7 @@ def api_name():
             formatted_response = json.dumps(search_response, indent=2)
             print(formatted_response)
             
-            input("\nAppuyez sur Entrée pour continuer...")
+            input("\nPress Enter to continue...")
             default_menu()
 
 #-----------------------------------------------------------------
@@ -382,16 +381,16 @@ def default_menu():
         text_default_fade = fade.greenblue(text_default)
         print(text_default_fade)
 
-        choose_text = '''(1) - Rechercher avec une Email.      /  (5) - Rechercher via un Password.
-(2) - Rechercher avec un Username.    /  (6) - Rechercher avec un mot de passe Hash.
-(3) - Rechercher via une Adresse Ip.  /  (7) - Rechercher avec Combo.
-(4) - Whois une Adresse Ip.           /  (8) - Rechercher avec Prenom & Nom.
+        choose_text = '''(1) - Search with an Email.           /  (5) - Search via a Password.
+(2) - Search with a Username.        /  (6) - Search with a Hashed Password.
+(3) - Search via an IP Address.      /  (7) - Search with Combo.
+(4) - Whois an IP Address.           /  (8) - Search with First & Last Name.
                (exit) for leave the app ! (by discord.gg/toolsfr on discord)'''
         
         text_choose_fade = fade.purpleblue(choose_text)
         print(text_choose_fade)
 
-        print(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrez votre choix (1-8) :")
+        print(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Enter your choice (1-8):")
         choice = input("> ")
         
         #API EMAIL:
@@ -431,15 +430,14 @@ def default_menu():
             clear_screen()
             exit()
 
-        #ERREUR
+        #ERROR
         else:
-            print("Choix invalide. Veuillez réessayer.")
-            input("Appuyez sur une touche pour continuer...")
+            print("Invalid choice. Please try again.")
+            input("Press any key to continue...")
             default_menu()
             
     except Exception as e:
         handle_error()
-
 
 if __name__ == "__main__":
     default_menu()
