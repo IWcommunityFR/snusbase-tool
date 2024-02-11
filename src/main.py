@@ -31,7 +31,7 @@ def handle_error():
     print(Style.RESET_ALL + "Une erreur s'est produite. Veuillez consulter les logs pour plus de détails.")
     save_error_log(error)
 
-snusbase_auth = 'sbuncd7b2bfcflweh3dkbeqsuzlzqk'
+snusbase_auth = 'sbyjthkoft4yaimbwcjqpmxs8huovd'
 snusbase_api = 'https://api-experimental.snusbase.com/'
 
 #API-COMBO:
@@ -100,7 +100,7 @@ def api_ip_whois():
             print("La requête a échoué.")
 
     if __name__ == "__main__":
-        auth_token = "sb0sl0hf866dmrtc4fkeatw7h8wlfo"
+        auth_token = "sbyjthkoft4yaimbwcjqpmxs8huovd"
         ip = input(Style.RESET_ALL + "["+Fore.BLUE+"+"+Style.RESET_ALL+"] " + "Entrez l'adresse IP : ")
 
         api_whois(auth_token, ip)
