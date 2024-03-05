@@ -1,4 +1,4 @@
-@echo ofF
+@echo off
 
 title Snusbase Tools
 rem You can do any color
